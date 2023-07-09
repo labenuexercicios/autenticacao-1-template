@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 import { UserBusiness } from "../business/UserBusiness"
-import { GetUsersInput, LoginInput, SignupInput } from "../dtos/UserDTO"
+import { GetUsersInput, LoginInput, SignupInput } from "../dtos/userDTO"
 
 export class UserController {
     constructor(
@@ -34,7 +34,7 @@ export class UserController {
     public signup = async (req: Request, res: Response) => {
         try {
             const input: SignupInput = {
-                id: req.body.id,
+                // id: req.body.id,
                 name: req.body.name,
                 email: req.body.email,
                 password: req.body.password
