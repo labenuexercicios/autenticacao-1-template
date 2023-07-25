@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
 import { ProductBusiness } from "../business/ProductBusiness"
-import { CreateProductInput, GetProductsInput } from "../dtos/ProductDTO"
 import { BaseError } from "../errors/BaseError"
+import { CreateProductInput, GetProductsInput } from "../dtos/productDTO"
 
 export class ProductController {
     constructor(
@@ -32,7 +32,6 @@ export class ProductController {
         try {
 
             const input: CreateProductInput = {
-                id: req.body.id,
                 name: req.body.name,
                 price: req.body.price
             }
